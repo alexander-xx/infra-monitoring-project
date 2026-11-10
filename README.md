@@ -81,6 +81,7 @@ ssh-copy-id -i ~/.ssh/id_ed25519.pub user@remote-server
 tar -czf project.tar.gz .
 # Копирование на сервер
 scp project.tar.gz user@remote-server:/path/to/deploy/
+
 Вариант с использованием tar + ssh (без промежуточного файла):
 tar -czf - . | ssh user@remote-server "tar -xzf - -C /path/to/deploy/"
 
